@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    {% load crispy_forms_tags %}
+    <form method="post" class="pt-3 m-auto" style="width: 450px">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <p class="mt-4 text-center">
+            <button class="btn btn-sm btn-primary">OK</button>
+        </p>
+    </form>
+  
+{% endblock %}

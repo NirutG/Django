@@ -1,0 +1,585 @@
+{% extends 'main2.html' %}
+{% load static %}
+
+{% block body %}
+<table border="3">
+<thead>
+  <tr>
+    <th class="table_tag" colspan="16">MACHINE : FLEX ATTACH</th>    
+  </tr>
+  <tr>
+    <th class="table_tag" colspan="16">PROCESS ID : 0950</th>
+  </tr>
+  <tr>
+    <th class="table_tag" colspan="16">ENGINEER : Witthawat Klangsawad</th>
+  </tr>
+  <tr>
+    <th class="table_left_head"></th>
+    <th class="table_top_head" colspan="3">{{fw.0}}</th>
+    <th class="table_top_head" colspan="3">{{fw.1}}</th>
+    <th class="table_top_head" colspan="3">{{fw.2}}</th>
+    <th class="table_top_head" colspan="3">{{fw.3}}</th>
+    <th class="table_top_head" colspan="3">{{fw.4}}</th>
+  </tr>
+</thead>
+<tbody class="table_cell">
+  {% for line in lines %}
+  <tr>
+    <td class="table_left_edge">{{mc_line.fpc}}</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti02">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+  </tr>
+  {% endfor %}
+  <!-- 
+    <tr> 
+    <td class="table_left_edge">{{mc_line.other}}</td>
+    <td class="table_cell_ti01">{{ fw.5 }}<br>{{sw_type.SW_EXE_1}}</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti04">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti04">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti02">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC03</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC04</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC05</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC06</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC07</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC09</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC10</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC11</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC12</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC13</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC14</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC15</td>
+    <td class="table_cell_ti02">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti02">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti02">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti02">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti02">SW.HMI<br>2.08</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC16</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC17</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC18</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC19</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC20</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC21</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC22</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC23</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC24</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC25</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC26</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC27</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC28</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC29</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+    <td class="table_cell_nottrigger">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_nottrigger">SW.PLC<br>2.13</td>
+    <td class="table_cell_nottrigger">SW.HMI<br>2.08</td>
+  </tr>
+  <tr>
+    <td class="table_left_edge">FPC30</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+    <td class="table_cell_ti01">SW.EXE<br>1.2.0.0</td>
+    <td class="table_cell_ti01">SW.PLC<br>2.13</td>
+    <td class="table_cell_ti01">SW.HMI<br>2.08</td>
+  </tr>
+  -->
+</tbody> 
+<tfoot>
+</tfoot>
+</table>
+<br>
+<style>
+  #test777 {
+    color:wheat;
+    background-color: rgb(90, 88, 88);
+}
+</style>
+
+<div id="test777">Made by NirutG</div>
+
+{% endblock %}
+    

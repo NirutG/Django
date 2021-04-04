@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    สรุปข้อมูล: <br>
+    email: {{ email }} <br>
+    passoword: {{ pswd }} <br>
+    address1: {{ addr1 }} <br>
+    address2: {{ addr2 }} <br>
+    payment: {{ payment }} <br><br>
+    
+    <a href="{% url 'account' %}">เริ่มใหม่</a>
+{% endblock %}

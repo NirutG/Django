@@ -1,0 +1,20 @@
+
+{% extends 'main.html' %}
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button>Upload</button>
+    </form>
+    <br>
+
+    {% if form.is_valid and file != None %}       
+        <b>Image Info:</b><br>
+        name: {{ file.name }}<br>
+        width: {{ file.image.width }}<br>
+        height: {{ file.image.height }}<br>
+        format: {{ file.image.format }}
+    {% endif %}
+
+{% endblock %}

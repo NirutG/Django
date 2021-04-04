@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <p><button>OK</button></p>
+    </form>
+    <br>
+    {% if form.is_valid %}
+        date: {{ form.date.value }}<br>
+        time: {{ form.time.value }}<br>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+    <button type="button" onclick="ajaxSubmit()">
+        Get Random Number
+    </button>
+
+    <script>    
+    function ajaxSubmit() {
+        axios({
+            url: '{% url "ajax_random" %}',
+            method: 'get',
+            params: {},
+            timeout: 5000,
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
+        })
+        .then(response => {
+            alert('random num: ' + response.data.num)
+        })
+        .catch(error => {
+            alert(error);
+        });
+    }    
+    </script>
+{% endblock %}

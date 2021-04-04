@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button>OK</button>
+    </form>
+    <br><br>
+    {% if form.is_valid %}
+        {% if form.cleaned_data.save %}
+            บันทึกข้อมูล
+        {% else %}
+            ไม่บันทึกข้อมูล
+        {% endif %}
+    {% endif %}
+
+{% endblock %}

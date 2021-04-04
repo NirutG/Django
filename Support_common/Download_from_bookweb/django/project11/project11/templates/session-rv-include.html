@@ -1,0 +1,13 @@
+
+<br><br>
+<a href="{% url 'rv_index' %}">หน้าแรก</a>
+<br><br>
+
+{% if rv|length > 0 %}
+    บทความที่ดูล่าสุด: <br>
+    <ul>
+    {% for title, url in rv.items %} 
+        <li><a href="{{ url }}">{{ title }}</a></li>   
+    {% endfor %}
+    </ul>
+{% endif %}

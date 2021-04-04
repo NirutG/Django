@@ -1,0 +1,33 @@
+
+{% extends 'main.html' %}
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.file.label }}
+        {{ form.file }}
+        <br><br><br>
+        <button type="button" onclick="formSubmit()">OK</button>
+        <script>
+            function formSubmit() {
+                var el = document.querySelector('[type="file"]');
+                if (el.files.length > 3) {
+                    alert('เลือกได้ไม่เกิน 3 ไฟล์');
+                } else {
+                    document.querySelector('form').submit();
+                }
+            }
+        </script>
+    </form>
+    <br>
+
+    {% if form.is_valid and file != None %}
+    <p>
+        {% for f in files %}
+            file name: {{ f.name }}<br>
+            file size: {{ f.size|filesizeformat }} <br>
+            content/type: {{ f.content_type }}
+            <hr>
+        {% endfor %}
+     </p>
+    {% endif %}
+{% endblock %}

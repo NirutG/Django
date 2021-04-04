@@ -1,0 +1,14 @@
+
+{% extends 'main.html' %}
+
+{% block body %}
+    {% if result == None %}
+        <a href="{% url 'cookie_test_result' %}">ทดสอบ Cookie</a>
+    {% else %}
+        {% if result == True %}
+            Test Cookie Worked!
+        {% else %}
+            Test Cookie Failed :(
+        {% endif %}
+    {% endif %}
+{% endblock %}

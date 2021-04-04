@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    <style> 
+        th, td { padding: 5px; } 
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div style="color:red">{{ err_msg }}</div>
+
+    {% if login == None %}
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+                <caption align="bottom">
+                    <br><button>Signin</button>
+                </caption>
+            </table>
+        </form>
+    {% else %}
+        สวัสดีค่ะ คุณ {{ login }} <br>
+        <h4>คุณเข้าสู่ระบบแล้ว</h4>
+        <a href="{% url 'signout' %}">ออกจากระบบ</a>
+    {% endif %}
+    
+{% endblock %}

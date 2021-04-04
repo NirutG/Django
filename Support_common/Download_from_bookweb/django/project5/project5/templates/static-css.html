@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static 'css/table.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <h3>Test of static css file</h3>
+    <table>
+        <tr><td>model</td><td>{% lorem 5 w %}</td></tr>
+        <tr><td>template</td><td>{% lorem 10 w %}</td></tr>
+        <tr><td>view</td><td>{% lorem 15 w %}</td></tr>
+    </table>
+{% endblock %}

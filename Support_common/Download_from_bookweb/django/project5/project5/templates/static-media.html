@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block style %}
+    <style>
+        img {
+            margin: 5px;
+            width: 80px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h3>ไฟล์รูปภาพ</h3>
+    <img src="{% static 'image/python.png' %}">
+    <img src="{% static 'image/django.png' %}">
+    <img src="{% static 'image/vs.png' %}">
+    <hr>
+
+    <h3>ไฟล์ video/mp4</h3>
+    <video src="{% static 'video/big-buck-bunny.mp4' %}" 
+          width="320" height="240" 
+          preload="auto" controls>
+   </video>
+   <hr>
+   <h3>ไฟล์ audio</h3>
+   <audio src="{% static 'audio/beat.mp3' %}" 
+         preload="auto" controls>
+   </audio>
+{% endblock %}

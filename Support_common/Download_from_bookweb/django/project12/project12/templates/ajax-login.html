@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <form>
+        <div id="msg"></div><br>
+        <table>
+            {{ form.as_table }}
+            <caption align="bottom">
+                <br>
+                <button type="button" onclick="ajaxSubmit()">
+                    Check Login
+                </button>               
+            </caption>
+        </table>
+    </form>
+    <br>
+    
+    <script>    
+    function ajaxSubmit() {
+        login = document.querySelector('#id_login').value;
+        
+        axios({
+            url: '{% url "ajax_login" %}',  //หรือ url: ''
+            method: 'get',
+            params: {'login':login},
+            timeout: 5000,
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
+        })
+        .then(response => {
+            var msg = '';
+            if (response.data.exist == true) {
+                   msg = 'ล็อกอิน: ' + login + ' มีผู้ใช้แล้ว';             
+            } else if (response.data.exist == false) {
+                msg = 'ล็อกอิน: ' + login + ' ยังไม่มีผู้ใช้';
+            } else {
+                msg = 'ข้อมูลไม่ถูกต้อง';
+            }
+
+            document.getElementById('msg').innerHTML = msg;
+        })
+        .catch(error => {
+            alert(error);
+        });
+    }    
+    </script>
+{% endblock %}

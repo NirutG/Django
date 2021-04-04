@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{ str1|cut:' ' }}<br>   {# ModelTemplateView #>
+        
+    {% autoescape off %}
+        <br>{{ str2|linenumbers }}<br>
+    {% endautoescape %}
+        
+    {{ str1|lower }}<br>    {# model template view #}
+    {{ str1|upper }}<br>    {# MODEL TEMPLATE VIEW #}
+    {{ str3|title }}<br>    {# Django Is The Web Framework #
+
+    {{ str3|slugify }}<br>  {# django-is-the-web-framework #}
+    {{ str3|truncatechars:20 }}<br> {# django is the web f... #}
+    {{ str3|truncatewords:3 }}<br>  {# django is the ... #}   
+
+    {% autoescape on %}	{# เพื่อแสดงให้เห็นว่าแท็ก HTML ไม่ถูกตัดออกจากสตริง #}
+	    {{ str4|truncatechars_html:15 }}<br>   {# <b>Don't repeat y...</b> #}
+	    {{ str4|truncatewords_html:2 }}<br>    {# <b>Don't repeat ...</b> #}
+	{% endautoescape %}
+
+    {{ str5|striptags }}<br>
+</body>
+</html>

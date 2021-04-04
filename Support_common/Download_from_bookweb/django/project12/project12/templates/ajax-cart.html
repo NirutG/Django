@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+{% block style %}
+    <style>
+        #divCart {
+            float: right; 
+            border: solid 1px gray; 
+            padding: 5px; margin: 3px;
+        }
+        div.product {
+            margin-top: 12px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <div id="divCart">
+        รายการสินค้าในรถเข็น<br>
+        <a href="javascript:ajaxClearCart()" id="linkClearCart">ลบทั้งหมด</a>
+
+        <!-- ถ้าไม่มีรายการสินค้าในระเข็น ให้ซ่อนลิงก์ "ลบทั้งหมด" -->
+        {% if cart|length == 0 %}
+            <script>
+                document.getElementById('linkClearCart').hidden = true;
+            </script>
+        {% endif %}
+
+        <!-- แสดงรายการสินค้าในรถเข็น -->
+        <div id="divCartList">
+            <ul>
+            {% for p in cart %}
+                <li>{{ p }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- แสดงรายการสินค้า -->
+    {% for p in products %}
+        <div class="product">
+            {{ p }}
+            {% if forloop.counter < 10 %}
+                &nbsp;&nbsp;&nbsp;
+            {% else %}
+                &nbsp;
+            {% endif %}
+            <button type="button" onclick="ajaxAddCart('{{ p }}')">
+                Add Cart
+            </button> 
+        </div>
+    {% endfor %}
+
+    <script>
+    function ajaxAddCart(product) {   
+        var d = new URLSearchParams();
+        d.append('product', product);
+        axios({
+            url: '{% url "ajax_cart" %}',  //หรือ url: ''
+            method: 'post',
+            data: d, 
+            timeout: 5000,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest', 
+                //'Content-Type':'application/x-www-form-urlencoded'
+            },
+            xsrfCookieName: 'csrftoken',
+            xsrfHeaderName: 'X-CSRFToken'
+        })
+        .then(response => {
+            var products = response.data.cart;
+            //ถ้าไม่มีรายการในรถเข็น ให้ซ่อนลิงก์ "ลบทั้งหมด" แต่ถ้ามีให้แสดง
+            var showClear = (products.length == 0);
+            document.getElementById('linkClearCart').hidden = showClear;
+
+            //แสดงรายการในรถเข็น
+            var list = '<ul>';
+            for (i = 0; i < products.length; i++) {
+                list += '<li>' + products[i] + '</li>';
+            }
+            list += '</ul>';
+
+            var el  = document.getElementById('divCartList');
+            el.innerHTML = list;
+        })
+        .catch(error => {
+            alert(error);
+        });
+    } 
+
+    function ajaxClearCart() {
+        if (!confirm('ยืนยันการลบ')) {
+            return;
+        }
+
+        axios({
+            url:'{% url "ajax_clear_cart" %}',
+            method: 'post',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest', 
+                //'Content-Type':'application/x-www-form-urlencoded'
+            },
+            xsrfCookieName: 'csrftoken',
+            xsrfHeaderName: 'X-CSRFToken'       
+        })
+        .then(response => {
+            //ลบรายการ (ข้อความ) ที่แสดงสินค้าในรถเข็น
+            document.getElementById('divCartList').innerHTML = '&nbsp;';
+            //ซ่อนลิงก์ "ลบทั้งหมด"
+            document.getElementById('linkClearCart').hidden = true;
+        })
+        .catch(error => {
+            alert(error);
+        });
+    }
+    </script>
+{% endblock %}

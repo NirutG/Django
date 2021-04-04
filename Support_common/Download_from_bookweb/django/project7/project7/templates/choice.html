@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    <style>
+        form ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        <table cellpadding="8">
+            {% csrf_token %}
+            {{ form.as_table }}
+
+            <caption align="bottom">
+                <br>
+                <button>OK</button>
+            </caption>
+        </table>
+    </form>
+    <br>
+
+    {% if form.is_valid %}
+        color: {{ form.color.value }} <br>
+        size: {{ form.cleaned_data.font_size }} <br>
+        style: {{ form.font_style.value|join:'' }} <br>
+
+        family: 
+        {% for f in form.font_family.value %}
+            '{{ f }}'       {# ให้มีเครื่องหมาย ' ' ครอบชื่อฟอนต์ #}
+            {% if not forloop.last %}
+                , &nbsp;    {# ถ้าไม่ใช้ลูปสุดท้าย ให้วางเครื่องหมาย , และช่องว่างต่อท้าย #}
+            {% endif %}
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

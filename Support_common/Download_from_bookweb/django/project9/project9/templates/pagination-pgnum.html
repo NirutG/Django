@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <br>
+    <table class="table table-striped table-bordered table-sm">
+    <caption class="text-center" style="caption-side:top">
+        รายการข้อมูลลำดับที่ {{ page.start_index}} - {{ page.end_index }}
+    </caption>
+    <thead class="thead-dark">        
+        <tr>
+            <th>ชื่อ</th>
+            <th>ตำแหน่ง</th>
+            <th>เงินเดือน</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+            <th>อีเมล</th>
+            <th>วันเกิด</th>
+        </tr>
+    </thead>
+    {% for r in page %}
+        <tr>
+            <td>{{ r.firstname }} {{ r.lastname }}</td>
+            <td>{{ r.position }}</td>
+            <td>{{ r.salary }}</td>
+            <td>{{ r.address }}</td>
+            <td>{{ r.phone }}</td>
+            <td>{{ r.email }}</td>
+            <td>{{ r.birthday|date:'j F Y' }}</td>              
+        </tr>
+    {% endfor %}
+    </table>
+
+    <div class="mt-4 text-center">
+        {% for n in page.paginator.page_range %}
+            {% if n != page.number %}
+                <a href="{% url 'pg_num' pg=n %}">{{n}}</a>
+            {% else %}
+                {{n}}
+            {% endif %}
+
+            {% if not forloop.last %}
+                -
+            {% endif %}
+        {% endfor %}
+    </div>
+   
+{% endblock %}

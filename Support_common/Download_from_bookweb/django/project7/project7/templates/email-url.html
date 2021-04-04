@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table}}
+        </table>
+        <br>
+        <button>OK</button>
+    </form>
+    <br>
+    {% if form.is_valid %}
+        ติดต่อเราได้ที่ {{ form.email.value|urlize }}<br>
+        หรือตรวจสอบข้อมูลที่ {{ form.website.value|urlize }}
+    {% endif %}
+
+{% endblock %}

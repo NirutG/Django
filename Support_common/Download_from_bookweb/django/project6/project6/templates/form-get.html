@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <form method="get" style="margin: 20px;">
+        <input type="text" name="q" placeholder="Search">
+        <button type="submit">OK</button>
+    </form>
+    <br>
+    {% if q is not None %}
+        Search: {{ q }}
+    {% endif %}
+
+{% endblock %}

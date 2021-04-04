@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	วันนี้ตรงกับ: {{ now|date:'d-m-Y'}}<br>
+	เวลาขณะนี้คือ: {{ now|time:'H:i:s' }}<br> {# หรือ now|date:'H:i:s' #}
+	<br>
+
+	เดือนนี้มี {{ now|date:'t'}} วัน
+	<br>
+
+	{% if now|date:'L' %}
+		ปีนี้เดือนกุมภาพันธ์มี 29 วัน
+	{% else %}
+		ปีนี้เดือนกุมภาพันธ์มี 28 วัน
+	{% endif %}
+	<br><br>
+
+	อีก 45 วันตรงกับ: {{ next45days|date:'l, j F Y' }}
+	<br><br>
+
+	ตั้งแต่ปีใหม่มาถึงขณะนี้: {{ newyear|timesince }} <br>
+	ตั้งแต่ปีใหม่มาถึงวาเลนไทน์: {{ newyear|timesince:valentine }}
+	<br><br>
+
+	จากปัจจุบันจนถึงสิ้นปี: {{ oldyear|timeuntil }}<br>
+	จากปีใหม่จนถึงสิ้นปี: {{ oldyear|timeuntil:newyear }}
+
+    <hr>
+    
+    {% now 'l, j F Y' %}
+    <br>
+
+    {% load tz %}
+    {% timezone 'Asia/Bangkok' %}
+        {% now 'd F Y H:i' %}		
+    {% endtimezone %}
+    <br>
+
+    {% now 'Y' as current_year %} 
+    <br><br>
+    &copy; {{ current_year }} developerthai.com
+    
+</body>
+</html>

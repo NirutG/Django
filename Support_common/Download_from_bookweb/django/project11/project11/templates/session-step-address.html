@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    <style>
+        th, td { padding: 5px; }
+        th { text-align: right; }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <caption align="bottom">
+                <br>
+                <button>Next &raquo;</button>
+            </caption>
+        </table>
+    </form>
+
+    
+{% endblock %}

@@ -1,0 +1,43 @@
+
+{% extends 'main.html' %}
+
+{% block style %}
+    <style>
+        td img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table cellpadding=5>
+            {{ form.as_table }}       
+            <caption align="bottom">
+                <br><button>Subscribe</button>
+            </caption>
+        </table>
+    </form>
+    <br>
+
+    {% if data.count > 0 %}
+        <hr>
+        <br>
+        <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr><th>Login</th><th>Password</th><th>Profile</th></tr>
+        </thead>
+        {% for r in data %}
+            <tr>
+                <td>{{ r.login }}</td>
+                <td>{{ r.password }}</td>
+                <td><img src="{{ r.profile.url }}"></td>
+            </tr>
+        {% endfor %}
+        </table>
+
+    {% endif %}
+ 
+{% endblock %}

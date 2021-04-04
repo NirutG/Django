@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST : Filter-Str-List-Num</title>
+</head>
+<body>
+    {{ var_xxx|default:1 }}<br>
+    {{ var_none|default_if_none:'Nirut Gammayeengoen' }}<br> {# เป็น Nirut Gammayeengoen เพราะใน views, var_none = None #}
+    {{ var_int|add:1 }}<br>
+    {{ var_int|add:2.9 }}<br>
+    {{ var_float|add:10 }}<br>
+
+    {% if var_str|length_is:0 %}
+        String is empty
+    {% else %}
+        Length: {{ var_str|length }}
+    {% endif %}
+</body>
+</html>

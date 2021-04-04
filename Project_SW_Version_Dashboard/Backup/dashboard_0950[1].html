@@ -1,0 +1,59 @@
+{% extends 'main2.html' %}
+{% load static %}
+
+{% block body %}
+<table border="3">
+<thead>
+  <tr>
+    <th class="table_tag" colspan="16">MACHINE : FLEX ATTACH</th>    
+  </tr>
+  <tr>
+    <th class="table_tag" colspan="16">PROCESS ID : 0950</th>
+  </tr>
+  <tr>
+    <th class="table_tag" colspan="16">ENGINEER : Witthawat Klangsawad</th>
+  </tr>
+  <tr>
+    <th class="table_left_head"></th>
+    <th class="table_top_head" colspan="3">{{fw.0}}</th>
+    <th class="table_top_head" colspan="3">{{fw.1}}</th>
+    <th class="table_top_head" colspan="3">{{fw.2}}</th>
+    <th class="table_top_head" colspan="3">{{fw.3}}</th>
+    <th class="table_top_head" colspan="3">{{fw.4}}</th>
+  </tr>
+</thead>
+<tbody class="table_cell">  
+  <style>
+    .border_right{
+      background-color:#66FF33;
+      border-right: 4px solid  #000000;
+    }
+  </style>
+  {% for line in lines %}
+  <tr>
+    <td class="table_left_edge">{{mc_line.fpc}}</td>
+    <td class={{css_class}}>{{sw_type}}<br>{{sw_verson}}</td>
+    <!--
+    <td class={{css_class}}>SW.PLC<br>2.13</td>    
+    <td id="id1">SW.HMI<br>2.08</td>
+    <td id="id1">SW.EXE<br>1.2.0.0</td>
+    <td id="id1">SW.PLC<br>2.13</td>
+    <td id="id1">SW.HMI<br>2.08</td>
+    <td id="id1">SW.EXE<br>1.2.0.0</td>
+    <td id="id1">SW.PLC<br>2.13</td>
+    <td id="id1">SW.HMI<br>2.08</td>
+    <td id="id1">SW.EXE<br>1.2.0.0</td>
+    <td id="id1">SW.PLC<br>2.13</td>
+    <td id="id1">SW.HMI<br>2.08</td>
+    <td id="id1">SW.EXE<br>1.2.0.0</td>
+    <td id="id1">SW.PLC<br>2.13</td>
+    <td id="id1">SW.HMI<br>2.08</td>
+    -->    
+  </tr>
+  {% endfor %}
+</tbody> 
+<tfoot>
+</tfoot>
+</table>
+{% endblock %}
+    

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST : Tag for</title>
+</head>
+<body>
+    <div>TEST For in range as Forward :</div>
+    {% for x in range %}
+        <div>{{x}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in range as Reversed :</div>
+    {% for x in range reversed %}
+        <div>{{x}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in list as Forward:</div>
+    {% for y in list %}
+        <div>{{y}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in list as Reversed:</div>
+    {% for y in list reversed %}
+        <div>{{y}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in dict items:</div>
+    {% for z in dict.items %}
+        <div>{{z}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in dict keys:</div>
+    {% for z in dict.keys %}
+        <div>{{z}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For in dict values:</div>
+    {% for z in dict.values %}
+        <div>{{z}} <br> </div>
+    {% endfor %}
+    <br>
+    <div>TEST For tag cycle:</div>
+    <ul>
+        {% for _ in range %}
+            <li>{% cycle 'One' 'Two' 'Three' 'Four' 'Five' %}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <div>TEST For empty:</div>
+    {% for x in empty_list %}
+        <div>{{x}}</div>
+        {% empty %}
+        <div>No item in list :)</div>
+    {% endfor %}
+    <br>
+</body>
+</html>

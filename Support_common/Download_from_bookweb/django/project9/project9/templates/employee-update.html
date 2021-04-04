@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    {% if not form.is_valid  %}
+        <form method="post" class="m-auto" style="width: 400px">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p class="mt-4 text-center">
+                <button class="btn btn-primary">บันทึกการเปลี่ยนแปลง</button>
+            </p>    
+        </form>
+
+    {% else %}
+        <h5>บันทึกการเปลี่ยนแปลงแล้ว</h5>
+        <br>
+        <a href="{% url 'emp_edit' %}">ย้อนกลับ</a>
+    {% endif %}
+
+{% endblock %}

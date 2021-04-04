@@ -1,0 +1,181 @@
+{% extends 'main2.html' %}
+{% load static %}
+
+{% block body %}
+    <h4>### Topic ###</h4>
+    <div class="h1">Header h1 หนึ่ง</div>
+    <div class="h2">Header h2 สอง</div>
+    <div class="h3">Header h3 สาม</div>
+    <div class="h4">Header h4 สี่</div>
+    <div class="h5">Header h5 ห้า</div>
+    <div class="h6">Header h6 หก</div>
+    <br><br><br>
+    <div class="display-1">Display-1</div>
+    <div class="display-2">Display-2</div>
+    <div class="display-3">Display-3</div>
+    <div class="display-4">Display-4</div>
+    <br><br><br>
+    <h4>### Example something ###</h4>
+    <h1 class="display-1">Hello World</h1>
+    <div class="display-2">สวัสดี ชาวโลก</div>
+    <br><br><br>
+    <div class="text-danger">Error! Please enter your password</div>
+    <p class="text-danger">กรุณาใส่ข้อมูลให้ครบทุกช่อง</p>
+    <br><br><br>    
+    <div class="bg-danger text-white">อันตราย อายุต่ำกว่า 18 ปี ห้ามเข้า</div>
+    <p class="bg-success text-white text-center">You Win!...</p>
+    <br><br><br>
+    <h4>### Font ###</h4>
+    <div class="font-weight-normal">Font Weight Normal - ปกติ</div>
+    <div class="font-weight-light">Font Weight Light - บาง</div>
+    <div class="font-weight-bold">Font Weight Bold - หนา</div>
+    <div class="font-italic">Font Italic - เอียง</div>
+    <div class="font-weight-bold font-itlic">Font Weight Bold + Italic - หนาเอียง</div>
+    <br><br><br>
+    <h4>### Format and Color message ###</h4>
+    <div class="text-info">Text-Info</div>
+    <div class="text-success">Text-Success</div>
+    <div class="text-primary">Text-Primary</div>
+    <br>
+    <div class="text-white bg-primary">Text-White, BG-Primary</div>
+    <div class="text-light bg-dark">Text-Light, BG-Dark</div>
+    <div class="text-primary bg-warning">Text-Primary, BG-Warning</div>
+    <br>
+    <div class="text-uppercase">Pulling yourself up by ...</div>
+    <div class="text-capitalize">Pulling yourself up by</div>
+    <br>
+    <div class="text-left">Text-Left</div>
+    <div class="text-center">Text-Center</div>
+    <div class="text-right">Text-Right</div>
+    <br>
+    <div>ฟอนต์ขนาดปกติ</div>
+    <div class="lead">ฟอนต์เมื่อใช้คลาส lead</div>
+    <div class="small">ฟอนต์เมื่อใช้คลาส small</div>
+    <br><br><br>
+    <h4>### Button ###</h4>
+    <button class="btn btn-primary">
+        Normal Button
+    </button>
+    <br><br>
+    <input type="button" value="Large Button" class="btn btn-lg btn-info">
+    <br><br>
+    <a href=# class="btn btn-sm btn-danger">Samll Button</a>    
+    <br><br><br>
+    <h4>### Table ###</h4>
+    <table class="table table-striped table-borderless table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Option</th>                
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <td>1</td>
+                <td>iPhone</td>
+                <td>35, 000</td>
+                <td>Gray, 6.5"...</tc>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>iPad</td>
+                <td>29,000</td>
+                <td>Gold, 12.9"...</td>
+            </tr>
+        </thead>
+    </table>
+    <br><br><br>
+    <h4>### Margin and Padding ###</h4>
+    <div class="p-0 mb-0 bg-dark text-white">>p-0, mb-0</div>
+    <div class="p-1 mb-1 bg-dark text-white">>p-1, mb-1</div>
+    <div class="p-2 mb-2 bg-dark text-white">>p-2, mb-2</div>
+    <div class="p-3 mb-3 bg-dark text-white">>p-3, mb-3</div>
+    <div class="p-4 mb-4 bg-dark text-white">>p-4, mb-4</div>
+    <div class="p-5 mb-5 bg-dark text-white">>p-5, mb-5</div>
+    <div class="p-auto mb-auto bg-dark text-white">>p-auto, mb-auto</div>
+    <br><br><br>
+    <h4>### Margin and Padding ###</h4>
+    <div class="alert alert-info alert-dismissible">
+        Alert เป็นคอมสำหรับแสดงข้อความ ซึ่งอาจเป็นการแจ้งเตือน...<button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show">
+        <h4 class="alert-heading">คำเตือน</h4>
+        {% lorem 20 w %}
+            <span class="close" data-dismiss="alert" aria-hidden="true">&times;</span>
+    </div>
+    <br><br><br>
+    <h3>### TEST Table from N'ใหม่ ###</h3>
+    <table class="table table-bordered ">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th colspan="3" scope="col">Wk1</th>
+            <th colspan="3" scope="col">Wk2</th>
+            <th colspan="3" scope="col">Wk3</th>
+            <th colspan="3" scope="col">Wk4</th>
+            <th colspan="3" scope="col">Wk5</th>
+       
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="table-dark">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row" class="table-dark">2</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row" class="table-dark">3</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+    <br><br><br>
+{% endblock %}

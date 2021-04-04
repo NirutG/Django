@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        <div>{{ captcha }}</div><br>
+        ตัวเลขที่เห็น: <input type="number" name="captcha" required>
+        <button>OK</button>
+    </form>
+    <br>
+    {% autoescape off %}
+        {{ msg }}
+    {% endautoescape %}
+    
+{% endblock %}

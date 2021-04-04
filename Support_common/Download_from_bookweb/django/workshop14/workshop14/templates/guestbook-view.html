@@ -1,0 +1,77 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    <style>
+        div#container {
+            margin: 5px;
+        }
+
+        div.gb-row {
+            margin-bottom: 10px;
+            padding: 3px;
+            border: solid 1px lightblue;
+        }
+
+        div.message {
+            padding: 5px;
+            background-color: powderblue;
+        }
+
+        div.bottom-message {
+            padding: 5px;
+            font-size: smaller;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+		<h5 class="text-center">ความคิดเห็นของผู้เยี่ยมชม</h5>
+        <br>
+        <div class="text-center mb-3">
+            ความคิดเห็นลำดับที่ {{ page.start_index}} - {{ page.end_index }}
+        </div>
+        {% for gb in page %}
+        <div class="gb-row">
+            <div class="message">
+                {{ gb.message }}
+            </div>
+            <div class="bottom-message">
+                {{ gb.name }}
+
+                {% if gb.email != None %}
+                    - {{ gb.email|urlize }}
+                {% endif %}
+
+                {% if gb.phone != None %}
+                    - {{ gb.phone }}
+                {% endif %}
+
+                - {{ gb.date|thaidate }}  {# thaidate คือฟิลเตอร์ที่สร้างเอาไว้ #}
+            </div>
+        </div>
+        {% endfor %}
+
+        <ul class="mt-5 pagination justify-content-center">
+            {% for n in page.paginator.page_range %}
+                {% if n != page.number %}
+                    <li class="page-item">
+                        <a class="page-link" 
+                            href="{% url 'guestbook_view' pg=n %}">{{n}}</a>
+                        </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link active">{{n}}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+
+            <div class="text-center mt-4">
+                <a href="{% url 'index' %}">หน้าแรก</a>
+                -
+                <a href="{% url 'guestbook_comment' %}">เขียนความคิดเห็นลงใน Guestbook</a>
+            </div>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'main2.html' %}
+{% load static %}
+{% block style %}
+    <style>
+        img{
+            margin: 5px;
+            width: 80px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <h3>ไฟล์รูปภาพ</h3>
+    <img src="{% static 'images/pexels-aditya-aiyar-3009119.jpg' %}">
+    <img src="{% static 'images/pexels-marta-dzedyshko-7175565.jpg' %}">
+    <img src="{% static 'images/pexels-mohamed-abdelsadig-2685319.jpg' %}">
+    <hr>
+    <h3>ไฟล์ video/mp4</h3>
+    <video src="{% static 'video/pexels-cottonbro-7013844.mp4' %}"
+        width="240" "height="240" preload="auto" controls>
+    </video>
+    <hr>
+    <h3>ไฟล์ audio</h3>
+    <audio src="{% static 'musics/bensound-ukulele.mp3' %}"
+        preload="auto" controls>
+    </audio>
+{% endblock %}

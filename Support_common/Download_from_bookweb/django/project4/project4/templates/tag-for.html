@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for x in range %}
+        <div>{{ x }}</div>
+    {% empty %}
+        No Data
+    {% endfor %}
+    <hr>
+
+    <ul>
+        {% for item in list reversed %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+
+    {% for k in dict.values %}
+	    <div>{{ k }}</div>
+    {% endfor %}
+    <hr>
+
+    {% for x in empty_list %}
+        <div>{{ x }}</div>
+        {% empty %}
+        <div>No item in list</div>
+    {% endfor %}
+    <hr>    
+
+    <ul>
+        {% for _ in range %}
+        <li>
+            {% cycle 'One' 'Two' 'Three' 'Four' 'Five' %}
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+
+    {% for x in list reversed %}
+        <div>รายการที่ {{ forloop.revcounter }}: {{ x }}</div>
+    {% endfor %}
+    <br>
+    {% for x in list reversed %}
+        <div>list[{{ forloop.revcounter0 }}] = {{ x }}</div>
+    {% endfor %}
+    <br>
+    <hr>
+
+    <br>
+    <div style="background: powderblue; padding: 5px">
+    {% for _ in range %}
+        {% if forloop.first %}
+            <span style="font-weight: bold; color: gray">
+        {% else %}
+            <span style="font-weight: normal; color: blue">
+        {% endif %}
+
+        {% cycle 'Home' 'Products' 'Orders' 'Subscribe' 'Contact-Us' %}
+        </span>
+
+        {% if not forloop.last %}
+            |
+        {% endif %}
+
+    {% endfor %}
+    </div>
+    <hr>
+    
+    <br><br>
+</body>
+</html>

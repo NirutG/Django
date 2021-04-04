@@ -1,0 +1,81 @@
+.table_tag{
+    background-color: #000000;
+    border-color:  #000000;
+    color: #FFFFFF;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size:14px;
+    text-align:left;
+    vertical-align:center;
+}
+
+.table_top_head{
+    background-color: #000000;
+    border-style: solid;
+    border-top: 2.5px solid #FFFFFF;
+    border-left: 2px solid  #FFFFFF;
+    border-right: 2px solid #FFFFFF;    
+    border-bottom: 2px solid #000000;
+    color: #FFFFFF;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size:12px;
+    text-align:center;
+    vertical-align:center;
+}
+
+.table_left_head{
+    background-color: #000000;    
+}
+
+.table_left_edge{
+    background-color: #000000;
+    border-style: solid;
+    border-top: 1.5px solid #FFFFFF;
+    border-left: 1.5px solid  #000000;
+    border-right: 1.5px solid #000000;    
+    border-bottom: 1.5px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size:12px;
+    text-align:center;
+    vertical-align:center;
+}
+
+.test_border{
+    border-right: 5px solid  #000000;
+    border-color:#e21717;
+}
+
+.table_cell{
+    border-color:#000000;
+    color:#000000;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size:12px;
+    text-align:center;
+    vertical-align:center;
+}
+
+.table_cell_ti01{
+    background-color:#66FF33;
+    border-right: 4px solid  #000000;
+}
+
+.table_cell_ti02{
+    background-color:#FFFF00;
+}
+
+.table_cell_ti03{
+    background-color:#FFFF00;
+}
+
+.table_cell_ti04{
+    background-color:#FF0000;
+}
+
+.table_cell_ti05{
+    background-color:#FF0000;
+}
+
+.table_cell_nottrigger{
+    background-color: #FF9933;
+}
+

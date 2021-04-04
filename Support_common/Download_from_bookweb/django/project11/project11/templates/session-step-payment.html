@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    <style>
+        form ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        <p>
+            <br>
+            <button>Next &raquo;</button>
+        </p>
+    </form>
+    
+{% endblock %}

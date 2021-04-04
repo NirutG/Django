@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <base href="http://127.0.0.1:8000/">
+</head>
+<body>
+<h2>Django Framework</h2>
+<nav style="background-color: powderblue; padding: 5px;">
+    <a href="home/">หน้าแรก</a>
+    <a href="products/">รายการสิ้นค้า</a>
+    <a href="contact/">ติดต่อเรา</a>
+</nav>
+<div class="container" style="margin: 10px;">
+{% block content %}
+{% endblock %}
+</div>
+<footer style="margin: 30px 20px; text-align: center;">
+    &copy; {% now 'Y' %} developerthai.com - All right reserved
+</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'js/browser-detect.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <script>
+        alert(browserDetect());
+    </script>
+{% endblock %}

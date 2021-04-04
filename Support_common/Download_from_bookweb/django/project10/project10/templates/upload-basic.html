@@ -1,0 +1,22 @@
+
+{% extends 'main.html' %}
+
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+		{{ form.file.label }}
+		{{ form.file }}
+        <br><br><br>
+        <button>Upload</button>
+    </form>
+    <br>
+
+    {% if form.is_valid and file != None %}
+    <p>
+        file name: {{ file.name }}<br>
+        file size: {{ file.size|filesizeformat }} <br>
+        content/type: {{ file.content_type }}<br>
+     </p>
+    {% endif %}
+
+{% endblock %}

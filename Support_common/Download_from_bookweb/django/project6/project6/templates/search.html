@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block body %}
+    {# ถ้าไม่มีข้อมูลถูกส่งขึ้นมาอย่างถูกต้อง จึงจะแสดงฟอร์ม เช่น การเปิดเพจครั้งแรก #}
+    {% if not form.is_valid %}
+    <form method="get">
+        {{ form.search }}
+        <button>OK</button>
+    </form>
+    {% endif %}
+
+    {% if form.is_valid %}
+        <br>
+        Search for: {{ form.search.label }}
+    {% endif %}
+
+{% endblock %}

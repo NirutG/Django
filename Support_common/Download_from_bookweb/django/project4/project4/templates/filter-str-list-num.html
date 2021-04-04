@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {{ var_xxx|default:1 }}<br>         {# 1 เพราะไม่มีตัวแปร var_xxx #}
+    {{ var_none|default_if_none:1}}<br>
+    {{ var_int|add:1 }}<br>
+    {{ var_int|add:1.9 }}<br>
+    {{ var_float|add:10 }}<br>
+    {{ var_str|make_list }}<br>
+
+    {% if var_str|length_is:0 %}
+        String is empty
+    {% else %}
+        String's length: {{ var_str|length }}
+    {% endif %}
+    
+</body>
+</html>

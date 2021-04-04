@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8" /> -->
+    <!-- <meta name="viewport" content="width=device-width> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge"> -->
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <!-- <title>Static Template</title> -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <section class="section" id="header">
+        <h1 style="color: red;">This is a Header 1</h1>
+        <h2 style="color: blue;">This is a Header 2</h2>
+        <h3 style="color: skyblue;">This is a Header 3</h3>
+        <h4>This is a Header 4</h4>
+        <h5>This is a Header 5</h5>
+        <h6 style="color:green;">This is a Header 6</h6>
+    </section>
+    <section class="section" id="paragraph">
+        <p>
+            This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+            This is a paragraph. This is a paragraph.
+        </p>
+    </section>
+    <section class="section" id="formatting">
+        <p>This is a <strong>Bold</strong></p>
+        <p>This is a <em>Emphasize</em></p>
+        <p><mark>This is a Mark</mark></p>
+        <p>This is a <sub>Subscript</sub></p>
+        <p>This is a <del>Strikeout</del></p>
+    </section>
+    <section class="section" id="quotations">
+        <p><q>This is a quote</q></p>
+        <blockquote>
+            This is a blockquote. This is a blockquote. This is a blockquote. This is a blockquote. This is a blockquote.
+        </blockquote>
+        <bdo dir="rtl">This is a bdo.</bdo>
+        <p>This is a <abbr title="World Health Organization">WHO</abbr></p>
+    </section>
+    <section class="section" id="link">
+        <a href="https://www.google.com">GOOGLE</a><br>
+        <a href="https://www.google.com" target="_blank">GOOGLE Target blank</a>
+        <a href="https://www.google.com" target="_blank"><p>This is a paragraph 1</p></a>
+        <a href="https://www.google.com" target="_blank"><p>This is a paragraph 2</p></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="C:\Dropbox\NirutG\Study\FrontEnd\FutureSkill\Support\img\samakarn2.jpg" alt="Samakarn2"></a>
+    </section>
+    <section class="section" id="media">
+        <img src="C:\Dropbox\NirutG\Study\FrontEnd\FutureSkill\Support\img\samakarn1.jpg" alt="No picture input"><br>
+        <video src="C:\Dropbox\NirutG\Study\FrontEnd\FutureSkill\Support\Video\OjEYtlfvpO.mp4" width="400" autoplay></video><br><br>
+    </section>
+
+
+    <section class="section" id="list">
+        <ol>
+            <li>My name is A.</li>
+            <li>My name is B.</li>
+            <li>My name is C.</li>
+        </ol>
+        <ol type="A">
+            <li>My name is A.</li>
+            <li>My name is B.</li>
+            <li>My name is C.</li>
+        </ol>
+        <ol type="I">
+            <li>My name is A.</li>
+            <li>My name is B.</li>
+            <li>My name is C.</li>
+        </ol>
+        <ul>
+            <li>My name is A.</li>
+            <li>My name is B.</li>
+            <li>My name is C.</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>My name is A.</li>
+            <li>My name is B.</li>
+            <li>My name is C.</li>
+        </ul>
+        <dl>
+            <dt>A</dt>
+            <dd>My name is A.</dd>
+            <dt>B</dt>
+            <dd>My name is B.</dd>
+            <dt>C</dt>
+            <dd>My name is C.</dd>
+        </dl>
+    </section>
+    <!--
+    <section class="section" id="iframe">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qtk1QQqiLjc"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lZSdNzMOGrc"></iframe>
+    </section>
+    -->
+        
+    <section class="section" id="script">
+        <p id="test-script">THIS iS A</p>
+        <script>
+            function runAlert(){
+                alert("This is a SCRIPT.")
+            }
+            document.getElementById('test-script').innerHTML = 'MY MATE NATE.'
+            // runAlert();
+        </script>
+    </section>
+    <section class="section" id="code">
+        <pre>
+            <code>
+                function test(a, b){
+                    return a+b;
+                }
+            </code>
+        </pre>
+        <p><var>a</var> = 1+2</p>
+    </section>
+    <section class="section" id="form">
+        <form>
+            Text1 : <input type="text1"><br><br>
+            Text2 : <input type="text2" readonly value="READ ONLY"><br><br>
+            Number : <input type="number"><br><br>
+            Password : <input name="password"><br><br>
+            submit : <input type="submit"><br><br>
+
+            Textarea : <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+            Select : <select name="">
+                <option value="A">Ant</option>
+                <option value="B">Bird</option>
+                <option value="C">Cat</option>
+                <option value="D">Dog</option>
+            </select><br><br>
+            Blue : <input type="radio" value="blue">
+            Red : <input type="radio" value="red">
+            Green : <input type="checkbox" value="green">
+            <input type="text disabled"><br><br>
+            <button onsubmit="" type="submit">SUBMIT</button><br><br><br>
+        </form>
+    </section>
+    <section class="section" id="table">
+        <table>
+            <caption><strong>SW.Version Control Dashboard</strong></caption>
+            <tr>
+                <th>MC_No.</th>
+                <th colspan="3">FW.1</th>
+                <th colspan="3">FW.2</th>
+                <th colspan="3">FW.3</th>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G1</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G2</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G3</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G4</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G5</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G6</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G7</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G8</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">G9</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GA</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GB</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GC</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GD</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GE</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GF</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GG</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GH</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GI</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GJ</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GK</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GL</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GM</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GN</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GO</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GP</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GQ</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GR</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GS</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GT</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GU</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GV</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GW</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GX</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GY</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">GZ</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+                <td style="text-align: center;">SW.EXE<br>1.2.0.0</td>
+                <td style="text-align: center;">SW.PLC<br>2.13</td>
+                <td style="text-align: center;">SW.HMI<br>2.08</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

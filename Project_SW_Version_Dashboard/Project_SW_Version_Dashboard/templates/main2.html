@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SW VERSION CONTROL{% endblock %}</title>
+
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    {% endblock %}
+
+    {% block script %}
+    <script src="{% static 'js/dashboard.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+{% endblock %}
+</body>
+</html>

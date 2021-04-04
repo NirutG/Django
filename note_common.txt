@@ -1,0 +1,8 @@
+Create project :
+1) mkdir ProjectName
+2) pip install pipenv
+3) pipenv install django
+4) pipenv shell
+5) django-admin startproject "PROJECT NAME" .
+6) python manage.py runserver
+
