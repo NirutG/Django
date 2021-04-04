@@ -39,8 +39,7 @@
 </table>
 -->
 
-{% comment %} Test HTML Render as STATES {% endcomment %} {% if
-state_dashboard_0950 == 1 %}
+{% if state_dashboard_0950 == 1 %}
 <h3>Second = 1</h3>
 {% elif state_dashboard_0950 == 2 %}
 <h3>Second = 2</h3>
@@ -49,6 +48,6 @@ state_dashboard_0950 == 1 %}
 {% elif state_dashboard_0950 == 4 %}
 <h3>Second = 4</h3>
 {% else %}
-<h3>Second = morethan 4 or 0</h3>
+<h3>Second = morethan 4 or 0 ---> now between 5 to 59</h3>
 
 {% endif %} {% endblock %}
