@@ -2,25 +2,48 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+class Cell extends Component {
+  state = {
+    number: 1
+  }
+  render() {
+    return( 
+    <div 
+      onClick={(e) => {
+        this.setState({
+          number: (this.state.number + 1) % 5
+        })
+      }} 
+      className="cell"
+    >
+      {this.state.number !==0 && this.state.number }
+    </div> 
+    );
+  }
+}
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hello World!!
-          </p>
-          <a
-            className="App-link"
-            // href="https://reactjs.org"
-            href="https://www.youtube.com" // modify to go to Youtube
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Go to Youtube by NirutG
-          </a>
-        </header>
+        <div className="board">
+          <Cell number={3}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={5}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+          <Cell number={4}/>
+        </div>
       </div>
     );
   }
